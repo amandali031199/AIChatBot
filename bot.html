@@ -9,8 +9,8 @@
         background-color: #F4F4F4;
       }
       #webchat{
-        height:72vh;
-        width: 50vh;
+        height:100%;
+        width: 100%;
       }
 
       .main {
@@ -24,20 +24,24 @@
 
       #webchat-bar {
         background-color: #222222;
-        height: 8vh;
-        width: 50vh;
+        height: 60px;
+        width: 100%;
         border-radius: 10px 10px 0px 0px;
         align-items: center;
         position: relative;
       }
 
       #webchat-container {
-        height: 80vh;
-        width: 50vh;
-        float: right;
+        height: 70%;
+        width: 90%;
         bottom: 0;
         border-radius: 10px;
         background-color: white;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
       }
       #mdiv {
         width: 25px;
@@ -99,6 +103,7 @@
       </div>
       <div id="webchat" role="main"></div>
       </div>
+
       <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
       <script>
          // "styleSet" is a set of CSS rules which are generated from "styleOptions"
@@ -112,7 +117,7 @@
             sendBoxBackground: '#E6E6E6',
             sendBoxButtonColor: '#9A9A9A',
             sendBoxTextColor: '#222222',
-            sendBoxHeight: 64,
+            sendBoxHeight: 60,
             primaryFont: 'Montserrat'
             });
 
